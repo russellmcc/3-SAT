@@ -1,0 +1,72 @@
+body {
+    background-color: #E3CBB7;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+}
+
+.clause , #chosen, #solved{
+    background-color: #B59178;
+    color: #02022A;
+    font-size:72px;
+    font-family: 'Futura';
+    margin: 20px;
+    padding: 10px;
+    text-align:center;
+    display: inline-block;
+}
+.ember-view {
+    display: inline-block;
+}
+.clause {
+    width: 230px;
+}
+#chosen {
+    height: 100px;
+    background-color: #DFBDAD;
+    width: 80%;
+}
+
+#solved {
+    display: block;
+    background-color: #02022A;
+    color: #FA154B;
+}
+
+#solved .ember-view {
+    display: block;
+}
+
+.solved {
+    color: #02022A;
+    background-color: #FA154B;
+}
+
+.conflicting .selected
+{
+    background-color: rgb(250,110,130);
+}
+
+.selectCircle{
+    width: 60px;
+    height: 80px;
+    display: inline-block;
+}
+
+.selected {
+    -moz-border-radius: 40px;
+    -webkit-border-radius: 40px;
+    border-radius: 40px;
+    background-color: #A58178;
+}
+
+.selected {
+}
+
+.invert {
+    color: #FA154B;
+}
