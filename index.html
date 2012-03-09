@@ -32,11 +32,7 @@ function getParameterByName(name)
         {{/each}}
       </div></div>
     </script>
-	<script type="text/javascript" data-main="cs!app" src="require-jquery.js"></script>
-</head>
-<body>
-  <div id="solved">
-    <script type="text/x-handlebars">
+    <script type="text/x-handlebars" data-template-name="solved-view">
       <div {{bindAttr class="App.puzzleController.solved:solved"}}>
         {{#if App.puzzleController.solved}}
         Solved!
@@ -45,22 +41,27 @@ function getParameterByName(name)
         {{/if}}
       </div>
     </script>
-  </div>
-  <div id="chosen">
-    <script type="text/x-handlebars">
+    <script type="text/x-handlebars" data-template-name="chosen-view">
       {{#each App.puzzleController.chosen}}
       <span {{bindAttr class="invert"}} >
         {{letter}}
       </span>
       {{/each}}
     </script>
+    <script type="text/x-handlebars" data-template-name="clauses-view">
+      {{#each App.puzzleController.clauses}}
+      {{view App.ClauseView contentBinding="this"}}
+      {{/each}}
+    </script>
+
+	<script type="text/javascript" data-main="cs!app" src="require-jquery.js"></script>
+</head>
+<body>
+  <div id="solved">
+  </div>
+  <div id="chosen">
   </div>
   <div id="clauses">
-  <script type="text/x-handlebars">
-    {{#each App.puzzleController.clauses}}
-      {{view App.ClauseView contentBinding="this"}}
-    {{/each}}
-  </script>
   </div>
   <div id="help">
     <h1>

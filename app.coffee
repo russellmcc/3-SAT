@@ -112,3 +112,9 @@ require ['ember-0.9.5.min'], ->
 
 
   App.puzzleController.resetPuzzle (getParameterByName('puzzle') ? 'AbCabcGeF')
+
+  (Ember.View.create {templateName:"solved-view"}).appendTo("#solved")
+
+  (Ember.View.create {templateName:"clauses-view"}).appendTo("#clauses")
+
+  (Ember.View.create {templateName:"chosen-view"}).appendTo("#chosen")
