@@ -1,4 +1,5 @@
-require ['ember-0.9.5.min'], ->
+require ['ember-0.9.5.min'],  ->
+ $(document).ready ->
   # make the main namespace.
   window.App = Ember.Application.create()
 
@@ -118,3 +119,5 @@ require ['ember-0.9.5.min'], ->
   (Ember.View.create {templateName:"clauses-view"}).appendTo("#clauses")
 
   (Ember.View.create {templateName:"chosen-view"}).appendTo("#chosen")
+
+  console.log "Finished loading"
