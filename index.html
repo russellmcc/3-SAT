@@ -21,13 +21,15 @@ function getParameterByName(name)
     <script type="text/x-handlebars" data-template-name="clause-view">
       <div class="clause"> <div {{bindAttr class="content.conflicting"}}>
         {{#each content.letters}}
-        <div class="selectCircle" {{action "select"}}>
-          <div {{bindAttr class="isSelected:selected"}}>
-            <span {{bindAttr class="invert"}} >
-              {{letter}}
+        {{#view App.LetterView contentBinding="this"}}
+        <div class="selectCircle">
+          <div {{bindAttr class="content.isSelected:selected"}}>
+            <span {{bindAttr class="content.invert"}}>
+              {{content.letter}}
             </span>
           </div>
         </div>
+        {{/view}}
         {{/each}}
       </div></div>
     </script>

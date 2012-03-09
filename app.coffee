@@ -28,11 +28,14 @@ require ['ember-0.9.5.min'], ->
       ).property('chosenPrivate')
     conflicting: false
 
+  App.LetterView = Ember.View.extend
+    mouseDown: -> @select()
+    touchStart: -> @select()
+    select: ->
+      (@get 'parentView').content.set 'chosen', @content
+
   App.ClauseView = Ember.View.extend
     templateName: 'clause-view'
-    select: (view, event, ctx) ->
-      @content.set 'chosen', ctx
-
 
   # this is kinda the controller for everything.
   App.puzzleController = Ember.Object.create
