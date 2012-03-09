@@ -9,7 +9,7 @@ body {
     user-select: none;
 }
 
-.clause , #chosen, #solved{
+.clause , #chosen, #solved, #help{
     background-color: #B59178;
     color: #02022A;
     font-size:72px;
@@ -25,12 +25,17 @@ body {
 .clause {
     width: 230px;
 }
+
 #chosen {
+    display:block;
     height: 100px;
     background-color: #DFBDAD;
-    width: 80%;
 }
 
+#help {
+    background-color: #DFBDAD;
+    font-size: 16px;
+}
 #solved {
     display: block;
     background-color: #02022A;
