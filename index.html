@@ -17,7 +17,6 @@ function getParameterByName(name)
     return decodeURIComponent(results[1].replace(/\+/g, " "));
 }
     </script>
-	<script type="text/javascript" data-main="cs!app" src="require-jquery.js"></script>
     <script type="text/x-handlebars" data-template-name="clause-view">
       <div class="clause"> <div {{bindAttr class="content.conflicting"}}>
         {{#each content.letters}}
@@ -33,6 +32,7 @@ function getParameterByName(name)
         {{/each}}
       </div></div>
     </script>
+	<script type="text/javascript" data-main="cs!app" src="require-jquery.js"></script>
 </head>
 <body>
   <div id="solved">
